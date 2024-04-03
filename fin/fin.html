@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Full Website with Curtain Effect</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <!-- Curtain element -->
+  <div id="curtain"></div>
+
+  <!-- Your website content -->
+  <header>
+    <h1>Website Header</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="home">
+      <h2>Home</h2>
+      <p>Welcome to the home section of the website!</p>
+    </section>
+    <section id="about">
+      <h2>About</h2>
+      <p>Learn more about our company and what we do.</p>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Get in touch with us.</p>
+    </section>
+  </main>
+
+  <!-- jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Custom script for the curtain effect -->
+  <script>
+    $(document).ready(function() {
+      // Show curtain on page load
+      $('#curtain').fadeIn(1000);
+
+      // Hide curtain and scroll to target section when clicking on a link
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top
+          }, 1500, function() {
+            // Hide curtain after the animation is complete
+            $('#curtain').fadeOut(1000);
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

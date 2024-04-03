@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="queary.css">
+    
+</head>
+<body>
+    <h2>I AM STUDY IN RED AND WHITE INSTITUT</h2>
+    <div class="box">
+        <h1>I AM STUDY IN RED AND WHITE INSTITUT</h1>
+        <p>Make your EV safer by preventing thermal propagation and reducing the risk of injuries and fatalities from road traffic collisions.</p>
+    </div>
+    
+   
+    <script src="./js/jquery-3.7.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('body').keyup(function () {
+                $(this).css('background-color','lightblue')
+             });
+        });
+
+
+        $(document).ready(function () {
+            $('.box').dblclick(function () {
+                $(this).css('background-color','lightgreen')
+             });
+        });
+
+        $(document).ready(function () {
+            $('h1').click(function () {
+                $(this).css('color','green')
+             });
+        });
+
+        $(document).ready(function () {
+            $('p').mouseover(function () {
+                $(this).css('color','lightblue')
+             });
+        });
+
+        $(document).ready(function () {
+            $('p').click(function () {
+                $(this).css('font-size','10px')
+             });
+        });
+    </script>
+
+</body>
+</html>

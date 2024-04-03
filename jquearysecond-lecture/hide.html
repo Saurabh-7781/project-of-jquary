@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+
+  <div id="box" class="test-one">
+        <h1>Taj Skyline</h1>
+        <p>
+            saurabh<br>
+            kaushal<br>
+            parth<br>
+            nilesh<br>
+            sahil<br>
+            prinsu<br>
+            chirag
+        </p>
+    </div>
+  <center>
+    <button class="b1 btnslow">show</button>
+</center>
+
+    <script src="./js/jquery-3.7.0.min.js"></script>
+
+    <script>
+       $(document).ready(function (){
+           $('.btnslow').click(function (){
+              $('#box p').show(1000)(function(slow){
+              });
+           });
+        });
+    </script>
+
+
+<div class="box-1">
+    
+         <div class="box-2">A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph.</div>
+         <div class="box-2">A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph.</div>
+         <div class="box-2">A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph.</div>
+        </div>
+    
+        <script>
+            $('.box-2').click(function(){
+                $(this).css('background-color','yellow')
+            });
+        </script>
+
+
+<div id="box-3" class="test-two">
+    <h1>Modi Stadiam</h1>
+    <p>
+        saurabh<br>
+        kaushal<br>
+        parth<br>
+        nilesh<br>
+        sahil<br>
+        prinsu<br>
+        chirag
+    </p>
+</div>
+<center>
+<button class="b1 btnhidee">hide</button>
+<button class="b1 btnsloww">show</button>
+
+</center>
+
+<script>
+   $(document).ready(function (){
+       $('.btnhidee').click(function (){
+          $('#box-3 p').hide(1000)(function(slow){
+          });
+       });
+    });
+
+    $(document).ready(function (){
+       $('.btnsloww').dblclick(function (){
+          $('#box-3 p').show(1000)(function(slow){
+          });
+       });
+    });
+</script>
+
+
+<div class="box-5">
+    
+    <div class="box-6">A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph.</div>
+</div>
+
+    <center>
+        <button class="b2 btnadd">add</button>
+        <button class="b2 btnremove">Remove</button>
+        
+        </center>
+  
+
+   <script>
+       $('.btnadd').click(function(){
+           $('.box-5').addClass('addclass')
+       });
+
+       $('.btnremove').click(function(){
+           $('.box-5').removeClass('addclass')
+       });
+   </script>
+
+<div class="box-7">
+    
+    <div class="box-8">A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph.</div>
+</div>
+<center>
+    <button class="b3 btntoggle">toggleclass</button>
+</center>
+    
+
+<script>
+    $('.btntoggle').click(function(){
+        $('.box-7').toggleClass('addclass')
+    });
+
+</script>
+</body>
+</html>
